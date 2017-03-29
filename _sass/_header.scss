@@ -1,0 +1,82 @@
+.navbar {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 0px;
+    position: relative;
+
+    .bar {
+        background: #429dc9; /* Old browsers */
+        background: -moz-linear-gradient(left,  #429dc9 0%, #ee519d 50%, #f7ca18 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #429dc9 0%,#ee519d 50%,#f7ca18 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #429dc9 0%,#ee519d 50%,#f7ca18 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#429dc9', endColorstr='#f7ca18',GradientType=1 ); /* IE6-9 */
+        display: block;
+        height: 8px;
+        width: 100%;
+    }
+
+    .logo {
+        display: inline-block;
+        float: left;
+        max-width: 225px;
+        padding: 24px 0px;
+    }
+
+    .nav {
+        display: inline-block;
+        float: right;
+        padding: 23px 0px;
+        text-align: right;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #222222;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                @include transition(opacity 0.25s);
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background: none;
+                    opacity: 0.5;
+                }
+            }
+
+            &.dropdown {
+                .dropdown-menu {
+                    background: rgba(0,0,0,0.8);
+                    border: 0px;
+                    @include border-radius(2px);
+                    @include box-shadow(none);
+                    display: block;
+                    float: right;
+                    left: -99999px;
+                    margin-top: 0px;
+                    min-width: 0px;
+                    opacity: 0;
+                    padding: 6px 0px;
+                    right: auto;
+                    @include transform(translateY(20px));
+                    @include transition(transform 0.5s, opacity 0.5s);
+
+                    a {
+                        color: #ffffff;
+                        padding: 6px 20px;
+                    }
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        left: auto;
+                        opacity: 1;
+                        right: auto;
+                        @include transform(translateY(0px));
+                    }
+                }
+            }
+        }
+    }
+}

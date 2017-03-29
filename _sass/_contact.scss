@@ -1,0 +1,30 @@
+#contact {
+    background: #1D536C;
+    color: #ffffff;
+    padding: 75px 0px;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    a {
+        border-bottom: 1px solid $yellow;
+        color: $yellow;
+        padding-bottom: 2px;
+        text-decoration: none;
+    }
+
+    .contact-form {
+        color: #222222;
+        margin-top: 35px;
+
+        label {
+            color: #ffffff;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    }
+}
